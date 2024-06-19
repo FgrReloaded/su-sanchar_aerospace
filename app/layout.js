@@ -1,6 +1,6 @@
 import { Navbar } from "./_components/Navbar";
 import "./globals.css";
-
+import "./style.css";
 
 export const metadata = {
   title: "Home | Su-Sanchar",

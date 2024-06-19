@@ -1,4 +1,4 @@
-import {Montserrat, Play} from 'next/font/google'
+import {Montserrat, Play, Oswald, Space_Grotesk, Jura, IBM_Plex_Sans, Questrial} from 'next/font/google'
 
 
 
@@ -9,6 +9,30 @@ export const montserrat = Montserrat({
 })
 
 export const play = Play({
+    subsets: ['latin'],
+    display: 'swap',
+    weight: "400"
+})
+
+export const oswald = Oswald({
+    subsets: ['latin'],
+    display: 'swap',
+    weight: "600"
+})
+
+export const space_grotesk = Space_Grotesk({
+    subsets: ['latin'],
+    display: 'swap',
+    weight: "400"
+})
+
+export const jura = Jura({
+    subsets: ['latin'],
+    display: 'swap',
+    weight: "400"
+})
+
+export const questrial = Questrial({
     subsets: ['latin'],
     display: 'swap',
     weight: "400"
