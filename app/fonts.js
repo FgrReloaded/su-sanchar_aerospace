@@ -1,4 +1,4 @@
-import {Montserrat, Play, Oswald, Space_Grotesk, Jura, IBM_Plex_Sans, Questrial} from 'next/font/google'
+import {Montserrat, Play, Oswald, Space_Grotesk, Jura, Questrial} from 'next/font/google'
 
 
 
