@@ -6,6 +6,7 @@ import { Card } from "./_components/Card";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
+import { useIsomorphicLayoutEffect } from "../../helpers/isomorphicEffect.js";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,40 +17,37 @@ export default function Home() {
     const ref2 = useRef();
     const ref3 = useRef();
 
-    useEffect(() => {
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: ref3.current,
-                start: "35% top",
-                end: "bottom top",
-                scrub: true,
-                pin: true,
-                pinnedContainer: ref3.current,
 
-            }
+    useIsomorphicLayoutEffect(() => {
+        let ctx = gsap.context(() => {
+
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ref3.current,
+                    start: "35% top",
+                    end: "bottom top",
+                    scrub: true,
+                    pin: true,
+                    pinnedContainer: ref3.current,
+                },
+            });
+
+            tl.fromTo(
+                ref1.current,
+                { top: "100%", ease: "power1.inOut" },
+                { top: "0%", ease: "power1.inOut" }
+            ).fromTo(
+                ref2.current,
+                { top: "100%", ease: "power1.inOut" },
+                { top: "0%", ease: "power1.inOut" }
+            );
+
         });
 
-        tl.fromTo(ref1.current, {
-            top: "100%",
-            ease: "power1.inOut"
-        }, {
-            top: "0%",
-            ease: "power1.inOut"
-        }).fromTo(ref2.current, {
-            top: "100%",
-            ease: "power1.inOut"
-        },{
-            top: "0%",
-            ease: "power1.inOut"
-        })
+        return () => ctx.revert();
 
-       
+    });
 
-        return () => {
-            ScrollTrigger.getAll().forEach(instance => instance.kill());
-        };
-
-    }, []);
 
     return (
         <>
