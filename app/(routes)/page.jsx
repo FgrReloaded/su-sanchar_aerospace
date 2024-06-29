@@ -55,11 +55,9 @@ export default function Home() {
 
                 <div className="relative z-10 sm:px-32 px-8 flex flex-col gap-8 mx-auto md:mx-0 md:mt-0 mt-6">
                     <h1 style={oswald.style} className="text-[#FEFBDE] text-[15vw] sm:text-[80px] text-center md:text-left leading-none">
-                        SU-SANCHAR
-                        <br />
-                        AEROSPACE
+                        SU-SANCHAR AEROSPACE
                     </h1>
-                    <p className="text-xl text-white w-4/5 text-center md:text-left mx-auto md:mx-0">We are aerospace company specializing in Defense</p>
+                    <p className="text-xl text-white w-4/5 text-center md:text-left mx-auto md:mx-0 md:ml-6">We are aerospace company specializing in Defense</p>
                 </div>
             </main>
             <section>
@@ -73,7 +71,7 @@ export default function Home() {
                     <div className="flex justify-between flex-col md:flex-row gap-10 md:gap-0">
                         <div style={jura.style} className="text-white md:w-[30%] md:text-left text-center mt-16 text-[17px]">Su-Sanchar Aerospace Pvt. Ltd pioneers next-gen defense drone tech for national security. Our UAS redefine defense ops with cutting-edge autonomy, reliability, and strategic advantage. We&apos;re committed to excellence, forging partnerships, and shaping the future of aerial defense.</div>
                         <div className="mask-image md:w-3/5 h-[300px] sm:h-[475px] w-full">
-                            <Image width={1000} height={1000} src="/img/Drone exploring a forest.jpg" alt="drone-img" className="w-full h-full object-cover" />
+                            <Image width={1000} height={1000} src="/img/home-revolution.jpg" alt="drone-img" className="w-full h-full object-cover" />
                         </div>
                     </div>
                 </div>
@@ -87,9 +85,9 @@ export default function Home() {
                     <div className="text-black sm:text-xl text-sm pl-8">OUR PRODUCTS</div>
                     <div className="text-black md:text-[75px] text-3xl sm:text-6xl md:text-left text-center leading-none">Fully Autonomous, Uncompromisingly Sustainable</div>
                     <div className="flex flex-col relative" ref={ref}>
-                        <Card title={'OPTIMIZED BATTERY EFFICIENCY'} description={"This is a space to share more about the business: who's behind it, what it does and what this site has to offer. It’s an opportunity to tell the story behind the business or describe a special service or product it offers. You can use this section to share the company history or highlight a particular feature that sets it apart from competitors."} />
-                        <Card className={"absolute top-0"} refernce={ref1} title={'COMPACT'} description={"This is a space to share more about the business: who's behind it, what it does and what this site has to offer. It’s an opportunity to tell the story behind the business or describe a special service or product it offers. You can use this section to share the company history or highlight a particular feature that sets it apart from competitors."} />
-                        <Card className={"absolute top-0"} refernce={ref2} title={'ADVANCED SENSOR TECHNOLOGY'} description={"This is a space to share more about the business: who's behind it, what it does and what this site has to offer. It’s an opportunity to tell the story behind the business or describe a special service or product it offers. You can use this section to share the company history or highlight a particular feature that sets it apart from competitors."} />
+                        <Card product={"/img/product-1.jpg"} className={"md:flex-row"} title={'THERMAL IMAGING'} features={["Realtime Monitoring", "Advanced Imaging"]} description={"Our cutting-edge drone boasts real-time monitoring capabilities, allowing users to receive instant updates and live feeds from the drone’s camera. Equipped with advanced imaging technology, it captures high-resolution photos and videos, providing clear and detailed visuals for various applications. Additionally, the drone ensures secure data transmission, safeguarding all captured data against unauthorized access and ensuring it remains confidential and protected during transfers."} />
+                        <Card product={"/img/product-2.jpg"} className={"absolute top-0 md:flex-row-reverse"} features={["AI Driven Precision", "Autonomous Protection"]} refernce={ref1} title={'NIGHT VISION'} description={"This state-of-the-art drone features AI-driven precision, enabling it to perform complex tasks with remarkable accuracy and efficiency. Its intelligent algorithms optimize flight paths and operations, ensuring optimal performance in various environments. Additionally, the drone offers autonomous protection, seamlessly detecting and avoiding obstacles to safeguard itself and its surroundings, allowing for worry-free operation in any setting."} />
+                        <Card product={"/img/product-3.jpg"} className={"absolute top-0 md:flex-row"} refernce={ref2} features={["Real-Time Surveillance", "Communication Anywhere"]} title={'HIGH RESOLUTION CAMERA'} description={"Our advanced drone offers real-time surveillance, providing continuous and immediate monitoring of designated areas. Its robust communication system ensures seamless connectivity and data transmission, enabling reliable communication everywhere, even in remote or challenging environments. This combination of real-time surveillance and ubiquitous communication makes it an ideal solution for security, reconnaissance, and various other applications."} />
                     </div>
                 </div>
             </section>
@@ -174,7 +172,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <section>
+            {/* <section>
                 <div className="bg-white py-40 px-10 sm:px-20 flex flex-col gap-12">
                     <div className="relative">
                         <div className="h-[0.5px] bg-[#c2c2c2] w-full mx-auto"></div>
@@ -197,7 +195,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
         </>
 

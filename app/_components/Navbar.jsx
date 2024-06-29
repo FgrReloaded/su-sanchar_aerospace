@@ -35,7 +35,7 @@ export const Navbar = () => {
                         backgroundColor: "#000", duration: 0
                     })
                     let classes = navList.current.classList;
-                    if(!classes.contains('translate-x-[100%]')) {
+                    if (!classes.contains('translate-x-[100%]')) {
                         navList.current.classList.add('translate-x-[100%]');
                         checked.current.checked = false;
                     }
@@ -59,16 +59,13 @@ export const Navbar = () => {
     }, [])
 
     const handleNavbar = () => {
-        let currentBg = navbarRef.current.style.backgroundColor;
         let checkedValue = checked.current.checked;
-        if(checkedValue) {
+        if (checkedValue) {
             navList.current.classList.remove('translate-x-[100%]');
-            navbarRef.current.style.backgroundColor = (currentBg === 'transparent' || currentBg === "") ? '#000' : 'transparent';
-            
-        }else{
-            setTimeout(() => {
-                navbarRef.current.style.backgroundColor = (currentBg === 'transparent' || currentBg === "") ? '#000' : 'transparent';
-            }, 750);
+            navbarRef.current.style.backgroundColor = "#000";
+
+        } else {
+           
             navList.current.classList.add('translate-x-[100%]');
         }
     }
@@ -76,9 +73,8 @@ export const Navbar = () => {
     return (
         <nav className='relative flex justify-center z-50'>
             <div ref={navbarRef} className="fixed w-full min-w-full top-0 z-10 bg-transparent h-[90px] max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-6 md:px-16">
-                <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse logo-animate ml-6">
-                    <span style={montserrat.style} className="self-center text-xl  whitespace-nowrap text-[#FEFBDE]">SU-SANCHAR</span>
-                    <Image width={100} height={100} src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Flowbite Logo" />
+                <a href="/" className="flex space-x-3 rtl:space-x-reverse logo-animate ml-6 relative w-32 sm:w-40">
+                    <Image width={500} height={500} src="/img/logo.png" className="absolute z-10 left-0 top-[-50px] sm:top-[-70px] object-cover" alt="Flowbite Logo" />
                 </a>
                 <label className="menu-button-wrapper mr-6" onClick={handleNavbar}>
                     <input ref={checked} type="checkbox" className="menu-button" />

@@ -1,4 +1,5 @@
 
+import Head from "next/head";
 import { Footer } from "./_components/Footer";
 import { Navbar } from "./_components/Navbar";
 import "./globals.css";
@@ -13,6 +14,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <body>
         <Navbar />
         {children}
