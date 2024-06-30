@@ -73,8 +73,8 @@ export const Navbar = () => {
     return (
         <nav className='relative flex justify-center z-50'>
             <div ref={navbarRef} className="fixed w-full min-w-full top-0 z-10 bg-transparent h-[90px] max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-6 md:px-16">
-                <a href="/" className="flex space-x-3 rtl:space-x-reverse logo-animate ml-6 relative w-32 sm:w-40">
-                    <Image width={500} height={500} src="/img/logo.png" className="absolute z-10 left-0 top-[-50px] sm:top-[-70px] object-cover" alt="Flowbite Logo" />
+                <a href="/" className="flex space-x-3 rtl:space-x-reverse logo-animate ml-6 relative w-32 sm:w-44">
+                    <Image width={600} height={600} src="/img/logo.png" className="absolute z-10 left-0 top-[-60px] sm:top-[-80px] object-cover" alt="Flowbite Logo" />
                 </a>
                 <label className="menu-button-wrapper mr-6" onClick={handleNavbar}>
                     <input ref={checked} type="checkbox" className="menu-button" />
@@ -96,7 +96,7 @@ export const Navbar = () => {
                             <Link href={'/about'} className="block py-2 px-3 text-[#D5BF8D] hover:text-[#C2C2C2] text-[17px] logo-animate">ABOUT</Link>
                         </li>
                         <li>
-                            <Link href={'/services'} className="block py-2 px-3 text-[#D5BF8D] hover:text-[#C2C2C2] text-[17px] logo-animate">SERVICES</Link>
+                            <Link href={'/products'} className="block py-2 px-3 text-[#D5BF8D] hover:text-[#C2C2C2] text-[17px] logo-animate">PRODUCTS</Link>
                         </li>
                         <li>
                             <Link href={'/contact'} className="block py-2 px-3 text-[#D5BF8D] hover:text-[#C2C2C2] text-[17px] logo-animate">CONTACT</Link>
