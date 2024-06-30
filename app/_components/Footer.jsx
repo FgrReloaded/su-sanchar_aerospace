@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { space_grotesk, questrial, montserrat } from "../fonts";
+import Link from "next/link";
 
 export const Footer = () => {
     return (
@@ -24,43 +25,34 @@ export const Footer = () => {
                         <div>
                             <div>
                                 <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-                                    <span style={montserrat.style} className="self-center text-xl  whitespace-nowrap text-black">SU-SANCHAR</span>
-                                    <Image width={100} height={100} src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Flowbite Logo" />
+                                    <Image width={200} height={200} src="/img/logo.png" className="h-1/2 invert" alt="Flowbite Logo" />
                                 </a>
                             </div>
 
                             <ul className="mt-8 flex gap-6">
                                 <li>
-                                    <a href="#" rel="noreferrer" target="_blank" className="text-gray-700 transition hover:opacity-75" >
-                                        <span className="sr-only">Facebook</span>
-                                        <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                            <path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd" />
-                                        </svg>
+                                    <a href="https://www.linkedin.com/company/su-sanchar-aerospace/" rel="noreferrer" target="_blank" className="text-gray-700 transition hover:opacity-75" >
+                                        <span className="sr-only">Linkedin</span>
+                                        <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18.3362 18.339H15.6707V14.1622C15.6707 13.1662 15.6505 11.8845 14.2817 11.8845C12.892 11.8845 12.6797 12.9683 12.6797 14.0887V18.339H10.0142V9.75H12.5747V10.9207H12.6092C12.967 10.2457 13.837 9.53325 15.1367 9.53325C17.8375 9.53325 18.337 11.3108 18.337 13.6245V18.339H18.3362ZM7.00373 8.57475C6.14573 8.57475 5.45648 7.88025 5.45648 7.026C5.45648 6.1725 6.14648 5.47875 7.00373 5.47875C7.85873 5.47875 8.55173 6.1725 8.55173 7.026C8.55173 7.88025 7.85798 8.57475 7.00373 8.57475ZM8.34023 18.339H5.66723V9.75H8.34023V18.339ZM19.6697 3H4.32923C3.59498 3 3.00098 3.5805 3.00098 4.29675V19.7033C3.00098 20.4202 3.59498 21 4.32923 21H19.6675C20.401 21 21.001 20.4202 21.001 19.7033V4.29675C21.001 3.5805 20.401 3 19.6675 3H19.6697Z"></path></svg>
                                     </a>
                                 </li>
 
                                 <li>
                                     <a
-                                        href="#"
+                                        href="https://www.youtube.com/@susancharaerospace"
                                         rel="noreferrer"
                                         target="_blank"
                                         className="text-gray-700 transition hover:opacity-75"
                                     >
-                                        <span className="sr-only">Instagram</span>
+                                        <span className="sr-only">Youtube</span>
 
-                                        <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                            <path
-                                                fillRule="evenodd"
-                                                d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
-                                                clipRule="evenodd"
-                                            />
-                                        </svg>
+                                        <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.6069 6.99482C19.5307 6.69695 19.3152 6.47221 19.0684 6.40288C18.6299 6.28062 16.501 6 12.001 6C7.50098 6 5.37252 6.28073 4.93225 6.40323C4.68776 6.47123 4.4723 6.69593 4.3951 6.99482C4.2863 7.41923 4.00098 9.19595 4.00098 12C4.00098 14.804 4.2863 16.5808 4.3954 17.0064C4.47126 17.3031 4.68676 17.5278 4.93251 17.5968C5.37252 17.7193 7.50098 18 12.001 18C16.501 18 18.6299 17.7194 19.0697 17.5968C19.3142 17.5288 19.5297 17.3041 19.6069 17.0052C19.7157 16.5808 20.001 14.8 20.001 12C20.001 9.2 19.7157 7.41923 19.6069 6.99482ZM21.5442 6.49818C22.001 8.28 22.001 12 22.001 12C22.001 12 22.001 15.72 21.5442 17.5018C21.2897 18.4873 20.547 19.2618 19.6056 19.5236C17.8971 20 12.001 20 12.001 20C12.001 20 6.10837 20 4.39637 19.5236C3.45146 19.2582 2.70879 18.4836 2.45774 17.5018C2.00098 15.72 2.00098 12 2.00098 12C2.00098 12 2.00098 8.28 2.45774 6.49818C2.71227 5.51273 3.45495 4.73818 4.39637 4.47636C6.10837 4 12.001 4 12.001 4C12.001 4 17.8971 4 19.6056 4.47636C20.5505 4.74182 21.2932 5.51636 21.5442 6.49818ZM10.001 15.5V8.5L16.001 12L10.001 15.5Z"></path></svg>
                                     </a>
                                 </li>
 
                                 <li>
                                     <a
-                                        href="#"
+                                        href="https://x.com/susanchar10735"
                                         rel="noreferrer"
                                         target="_blank"
                                         className="text-gray-700 transition hover:opacity-75"
@@ -84,19 +76,19 @@ export const Footer = () => {
 
                                 <ul className="mt-6 space-y-4 text-xs sm:text-sm" style={questrial.style}>
                                     <li>
-                                        <a href="#" className="text-gray-500 transition hover:opacity-75">HOME</a>
+                                        <Link href="/" className="text-gray-500 transition hover:opacity-75">HOME</Link>
                                     </li>
 
                                     <li>
-                                        <a href="#" className="text-gray-500 transition hover:opacity-75"> ABOUT </a>
+                                        <Link href="/about" className="text-gray-500 transition hover:opacity-75"> ABOUT </Link>
                                     </li>
 
                                     <li>
-                                        <a href="#" className="text-gray-500 transition hover:opacity-75"> SERVICES </a>
+                                        <Link href="/services" className="text-gray-500 transition hover:opacity-75"> SERVICES </Link>
                                     </li>
 
                                     <li>
-                                        <a href="#" className="text-gray-500 transition hover:opacity-75"> CONTACT </a>
+                                        <Link href="/contact" className="text-gray-500 transition hover:opacity-75"> CONTACT </Link>
                                     </li>
                                 </ul>
                             </div>
@@ -106,15 +98,20 @@ export const Footer = () => {
 
                                 <ul className="mt-6 space-y-4 text-xs sm:text-sm" style={questrial.style}>
                                     <li>
-                                        <a href="#" className="text-gray-500 transition hover:opacity-75"> info@su-sanchar.com </a>
+                                        <a href="#" className="text-gray-500 transition hover:opacity-75">info@susancharaerospace.com</a>
                                     </li>
 
                                     <li>
-                                        <a href="#" className="text-gray-500 transition hover:opacity-75"> Tel:  +91 1234567890 </a>
+                                        <a href="#" className="text-gray-500 transition hover:opacity-75">Phone: +91 9354021289, <br /> +91 7817870741
+                                        </a>
                                     </li>
 
                                     <li>
-                                        <a href="#" className="text-gray-500 transition hover:opacity-75"> Mathura, Uttar Pradesh, India 281406 </a>
+                                        <a className="text-gray-500 transition hover:opacity-75"> Noida, Uttar Pradesh, India
+                                            <br />
+
+                                            Registered office : Haripurwa, Hardoi, UP India, 241001
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
