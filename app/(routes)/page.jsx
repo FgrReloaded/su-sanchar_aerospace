@@ -1,21 +1,25 @@
+"use client"
+
 import { oswald, space_grotesk, jura, questrial } from "../fonts";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
+import { useState } from "react";
 
 
 
 export default function Home() {
+    const [isHide, setIsHide] = useState(true);
 
     return (
         <>
             <main className="bg-hero-pattern bg-cover w-full h-screen bg-center relative hero-section flex items-center justify-between md:pr-2">
 
-                <div className="relative z-10 sm:px-32 px-8 flex flex-col gap-2 mx-auto md:mt-10 mt-6">
+                <div className="relative z-10 sm:px-32 px-8 flex flex-col gap-1 mx-auto md:mt-10 mt-6">
                     <h1 style={oswald.style} className="text-[#FEFBDE] text-[15vw] sm:text-[80px] text-center leading-none">
                         SU-SANCHAR AEROSPACE
                     </h1>
-                    <p className="text-xl text-white w-4/5 text-center tracking-widest mx-auto">We are aerospace company specializing in Defense</p>
+                    <p className="md:text-[0.95rem] sm:text-lg text-sm text-white w-full text-center tracking-[0.35rem] uppercase md:whitespace-nowrap mx-auto">We are aerospace company specializing in Defense</p>
                 </div>
             </main>
             <section>
@@ -72,74 +76,81 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <section>
-                <div className="bg-black py-40 px-10 sm:px-20 flex flex-col gap-12">
-                    <div className="relative">
-                        <div className="h-[0.5px] bg-[#6e6e6e] w-full mx-auto"></div>
-                        <div className="h-[0.5px] bg-white w-1/5 absolute left-0 top-0"></div>
-                    </div>
-                    <div style={space_grotesk.style} className="text-white text-sm sm:text-xl">COMPANY</div>
-                    <div style={questrial.style} className="text-white md:text-[75px] text-3xl sm:text-5xl md:text-left text-center leading-none ">Su-Sanchar in Numbers</div>
-                    <div className="flex justify-center items-center gap-6 flex-wrap md:flex-nowrap">
-                        <div className="flex flex-col gap-6 w-full" style={questrial.style}>
-                            <h3 className="text-white text-7xl ">50+</h3>
-                            <div className="relative">
-                                <div className="h-[0.5px] bg-[#6e6e6e] w-full mx-auto"></div>
-                                <div className="h-[0.5px] bg-white w-1/5 absolute left-0 top-0"></div>
+            {
+                !isHide &&
+                <section>
+                    <div className="bg-black py-40 px-10 sm:px-20 flex flex-col gap-12">
+                        <div className="relative">
+                            <div className="h-[0.5px] bg-[#6e6e6e] w-full mx-auto"></div>
+                            <div className="h-[0.5px] bg-white w-1/5 absolute left-0 top-0"></div>
+                        </div>
+                        <div style={space_grotesk.style} className="text-white text-sm sm:text-xl">COMPANY</div>
+                        <div style={questrial.style} className="text-white md:text-[75px] text-3xl sm:text-5xl md:text-left text-center leading-none ">Su-Sanchar in Numbers</div>
+                        <div className="flex justify-center items-center gap-6 flex-wrap md:flex-nowrap">
+                            <div className="flex flex-col gap-6 w-full" style={questrial.style}>
+                                <h3 className="text-white text-7xl ">50+</h3>
+                                <div className="relative">
+                                    <div className="h-[0.5px] bg-[#6e6e6e] w-full mx-auto"></div>
+                                    <div className="h-[0.5px] bg-white w-1/5 absolute left-0 top-0"></div>
+                                </div>
+                                <p className="text-gray-400">Employees</p>
                             </div>
-                            <p className="text-gray-400">Employees</p>
-                        </div>
-                        <div className="flex flex-col gap-6 w-full" style={questrial.style}>
-                            <h3 className="text-white text-7xl ">8</h3>
-                            <div className="relative">
-                                <div className="h-[0.5px] bg-[#6e6e6e] w-full mx-auto"></div>
-                                <div className="h-[0.5px] bg-white w-1/5 absolute left-0 top-0"></div>
+                            <div className="flex flex-col gap-6 w-full" style={questrial.style}>
+                                <h3 className="text-white text-7xl ">8</h3>
+                                <div className="relative">
+                                    <div className="h-[0.5px] bg-[#6e6e6e] w-full mx-auto"></div>
+                                    <div className="h-[0.5px] bg-white w-1/5 absolute left-0 top-0"></div>
+                                </div>
+                                <p className="text-gray-400">Core Team</p>
                             </div>
-                            <p className="text-gray-400">Core Team</p>
-                        </div>
-                        <div className="flex flex-col gap-6 w-full" style={questrial.style}>
-                            <h3 className="text-white text-7xl ">5+</h3>
-                            <div className="relative">
-                                <div className="h-[0.5px] bg-[#6e6e6e] w-full mx-auto"></div>
-                                <div className="h-[0.5px] bg-white w-1/5 absolute left-0 top-0"></div>
+                            <div className="flex flex-col gap-6 w-full" style={questrial.style}>
+                                <h3 className="text-white text-7xl ">5+</h3>
+                                <div className="relative">
+                                    <div className="h-[0.5px] bg-[#6e6e6e] w-full mx-auto"></div>
+                                    <div className="h-[0.5px] bg-white w-1/5 absolute left-0 top-0"></div>
+                                </div>
+                                <p className="text-gray-400">Partners Worldwide</p>
                             </div>
-                            <p className="text-gray-400">Partners Worldwide</p>
-                        </div>
-                        <div className="flex flex-col gap-6 w-full" style={questrial.style}>
-                            <h3 className="text-white text-7xl ">100+</h3>
-                            <div className="relative">
-                                <div className="h-[0.5px] bg-[#6e6e6e] w-full mx-auto"></div>
-                                <div className="h-[0.5px] bg-white w-1/5 absolute left-0 top-0"></div>
+                            <div className="flex flex-col gap-6 w-full" style={questrial.style}>
+                                <h3 className="text-white text-7xl ">100+</h3>
+                                <div className="relative">
+                                    <div className="h-[0.5px] bg-[#6e6e6e] w-full mx-auto"></div>
+                                    <div className="h-[0.5px] bg-white w-1/5 absolute left-0 top-0"></div>
+                                </div>
+                                <p className="text-gray-400">Customers</p>
                             </div>
-                            <p className="text-gray-400">Customers</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            {/* <section>
-                <div className="bg-white py-40 px-10 sm:px-20 flex flex-col gap-12">
-                    <div className="relative">
-                        <div className="h-[0.5px] bg-[#c2c2c2] w-full mx-auto"></div>
-                        <div className="h-[0.5px] bg-black w-1/5 absolute left-0 top-0"></div>
-                    </div>
-                    <div style={space_grotesk.style} className="text-black text-sm sm:text-xl">COLLABORATION</div>
-                    <div style={questrial.style} className="text-black md:text-[75px] text-3xl sm:text-5xl md:text-left text-center leading-none ">Our Industry Partners</div>
-                    <div className="flex justify-center flex-wrap gap-6">
-                        <div className="md:w-[40vw] sm:w-[30vw] shadow-lg rounded-xl overflow-hidden">
-                            <Image width={1000} height={1000} src="/img/partner.png" alt="partner" className="w-full h-full object-cover" />
-                        </div>
-                        <div className="md:w-[40vw] sm:w-[30vw] shadow-lg rounded-xl overflow-hidden">
-                            <Image width={1000} height={1000} src="/img/partner.png" alt="partner" className="w-full h-full object-cover" />
-                        </div>
-                        <div className="md:w-[40vw] sm:w-[30vw] shadow-lg rounded-xl overflow-hidden">
-                            <Image width={1000} height={1000} src="/img/partner.png" alt="partner" className="w-full h-full object-cover" />
-                        </div>
-                        <div className="md:w-[40vw] sm:w-[30vw] shadow-lg rounded-xl overflow-hidden">
-                            <Image width={1000} height={1000} src="/img/partner.png" alt="partner" className="w-full h-full object-cover" />
                         </div>
                     </div>
-                </div>
-            </section> */}
+                </section>
+            }
+            {
+                !isHide &&
+                <section>
+                    <div className="bg-white py-40 px-10 sm:px-20 flex flex-col gap-12">
+                        <div className="relative">
+                            <div className="h-[0.5px] bg-[#c2c2c2] w-full mx-auto"></div>
+                            <div className="h-[0.5px] bg-black w-1/5 absolute left-0 top-0"></div>
+                        </div>
+                        <div style={space_grotesk.style} className="text-black text-sm sm:text-xl">COLLABORATION</div>
+                        <div style={questrial.style} className="text-black md:text-[75px] text-3xl sm:text-5xl md:text-left text-center leading-none ">Our Industry Partners</div>
+                        <div className="flex justify-center flex-wrap gap-6">
+                            <div className="md:w-[40vw] sm:w-[30vw] shadow-lg rounded-xl overflow-hidden">
+                                <Image width={1000} height={1000} src="/img/partner.png" alt="partner" className="w-full h-full object-cover" />
+                            </div>
+                            <div className="md:w-[40vw] sm:w-[30vw] shadow-lg rounded-xl overflow-hidden">
+                                <Image width={1000} height={1000} src="/img/partner.png" alt="partner" className="w-full h-full object-cover" />
+                            </div>
+                            <div className="md:w-[40vw] sm:w-[30vw] shadow-lg rounded-xl overflow-hidden">
+                                <Image width={1000} height={1000} src="/img/partner.png" alt="partner" className="w-full h-full object-cover" />
+                            </div>
+                            <div className="md:w-[40vw] sm:w-[30vw] shadow-lg rounded-xl overflow-hidden">
+                                <Image width={1000} height={1000} src="/img/partner.png" alt="partner" className="w-full h-full object-cover" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            }
+
 
         </>
 
