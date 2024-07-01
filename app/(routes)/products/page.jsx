@@ -73,20 +73,24 @@ export default function Page() {
                     <p className="text-sm font-medium w-full text-center md:w-2/5 ml-auto md:text-justify px-6 text-white">Engineered to drive autonomously, the Volaso delivery robot uses Perception Enabled Sensors to make decisions with environmental awareness, efficiency and safety.</p>
                     <div className="w-full mt-20 flex gap-8 h-full md:flex-row flex-col">
                         <div className="w-full md:w-1/2 flex flex-col overflow-hidden rounded-2xl shadow-2xl h-full bg-white">
-                            <div className="p-10 shadow-2xl flex flex-col gap-6 pb-32">
+                            <div className="p-10 shadow-2xl flex flex-col gap-6 pb-10">
                                 <span style={space_grotesk.style}>ON THE ROAD SAFETY</span>
                                 <hr />
-                                <p className="text-sm font-medium">This is the space to describe the product. Write a short overview that includes important features, pricing and other relevant info for a potential buyer. Consider adding an image or video to show off the product and entice visitors to make a purchase.</p>
+                                <p className="text-sm font-medium text-justify">
+                                    Drones enhance on-road safety by providing aerial surveillance, monitoring traffic conditions, and assisting in accident response. They can quickly assess and report hazards, helping to prevent accidents and improve overall traffic management.
+                                </p>
+
                             </div>
                             <div className="w-full h-full">
                                 <Image width={1000} height={1000} src="/img/service-1.jpg" alt="service-1" className="w-full h-full object-cover" />
                             </div>
                         </div>
                         <div className="w-full md:w-1/2 flex flex-col overflow-hidden rounded-2xl shadow-2xl md:mt-16 h-full bg-white">
-                            <div className="p-10 shadow-2xl flex flex-col gap-6 pb-32">
+                            <div className="p-10 shadow-2xl flex flex-col gap-6 pb-10">
                                 <span style={space_grotesk.style}>LOW EMISSIONS & EFFICIENCY</span>
                                 <hr />
-                                <p className="text-sm font-medium">This is the space to describe the product. Write a short overview that includes important features, pricing and other relevant info for a potential buyer. Consider adding an image or video to show off the product and entice visitors to make a purchase.</p>
+                                <p className="text-sm font-medium text-justify">
+                                    Drones offer low emissions and high efficiency by utilizing electric power, reducing greenhouse gases compared to traditional vehicles. Their precise navigation and lightweight design enhance energy efficiency, making them a sustainable choice for various applications.</p>
                             </div>
                             <div className="w-full h-full">
                                 <Image width={1000} height={1000} src="/img/service-2.png" alt="service-2" className="w-full h-full object-cover" />
@@ -110,7 +114,7 @@ export default function Page() {
                     </div>
                 </div>
             </section>
-           
+
         </>
 
     )

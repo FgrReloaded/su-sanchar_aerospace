@@ -27,6 +27,12 @@ export default function Page() {
                 </div>
                 <div className="flex gap-4 mt-8">
                     <div className="w-full flex flex-col gap-2">
+                        <label className="text-xs text-[#636363]">Phone  *</label>
+                        <input type="number" className="w-full border-[1px] border-black py-1 px-2 rounded-lg outline-none text-[#636363]"/>
+                    </div>
+                </div>
+                <div className="flex gap-4 mt-8">
+                    <div className="w-full flex flex-col gap-2">
                         <label className="text-xs text-[#636363]">Email  *</label>
                         <input type="email" className="w-full border-[1px] border-black py-1 px-2 rounded-lg outline-none text-[#636363]"/>
                     </div>

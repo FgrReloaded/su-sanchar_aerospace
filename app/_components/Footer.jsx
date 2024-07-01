@@ -1,8 +1,12 @@
+"use client"
+
 import Image from "next/image";
 import { space_grotesk, questrial, montserrat } from "../fonts";
 import Link from "next/link";
+import { useState } from "react";
 
 export const Footer = () => {
+    const [isHide, setIsHide] = useState(true);
     return (
         <footer>
             <div className="py-20 px-8 sm:px-20">
@@ -21,15 +25,15 @@ export const Footer = () => {
                     </div>
                 </div>
                 <div className="mx-auto max-w-screen-xl space-y-8 px-4 pt-24 sm:px-6 lg:space-y-16 lg:px-8">
-                    <div className="flex justify-between sm:flex-row flex-col sm:gap-0 gap-6">
+                    <div className="flex items-center md:justify-between md:flex-row flex-col sm:gap-0 gap-6">
                         <div>
                             <div>
-                                <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+                                <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                                     <Image width={200} height={200} src="/img/logo.png" className="h-1/2 invert" alt="Flowbite Logo" />
-                                </a>
+                                </Link>
                             </div>
 
-                            <ul className="mt-8 flex gap-6">
+                            <ul className="mt-8 flex gap-6 justify-center">
                                 <li>
                                     <a href="https://www.linkedin.com/company/su-sanchar-aerospace/" rel="noreferrer" target="_blank" className="text-gray-700 transition hover:opacity-75" >
                                         <span className="sr-only">Linkedin</span>
@@ -70,8 +74,8 @@ export const Footer = () => {
                             </ul>
                         </div>
 
-                        <div className="flex gap-8 sm:gap-20 w-full sm:w-3/5 justify-center sm:justify-end text-center flex-wrap">
-                            <div className="w-[30vw] sm:w-1/4">
+                        <div className="flex gap-8 sm:gap-20 w-full md:w-3/5 justify-center sm:justify-end text-center mt-10 md:mt-0 ">
+                            <div className="w-[40vw] md:w-2/5">
                                 <p className="font-medium text-gray-900" style={space_grotesk.style}>COMPANY</p>
 
                                 <ul className="mt-6 space-y-4 text-xs sm:text-sm" style={questrial.style}>
@@ -93,7 +97,7 @@ export const Footer = () => {
                                 </ul>
                             </div>
 
-                            <div className="w-[30vw] sm:w-1/4">
+                            <div className="w-[40vw] md:w-2/5">
                                 <p className="font-medium text-gray-900" style={space_grotesk.style}>CONTACT</p>
 
                                 <ul className="mt-6 space-y-4 text-xs sm:text-sm" style={questrial.style}>
@@ -116,6 +120,8 @@ export const Footer = () => {
                                 </ul>
                             </div>
 
+                        {
+                            !isHide &&
                             <div className="w-[30vw] sm:w-1/4">
                                 <p className="font-medium text-gray-900" style={space_grotesk.style}>Legal</p>
 
@@ -129,6 +135,8 @@ export const Footer = () => {
                                     </li>
                                 </ul>
                             </div>
+                        }
+
                         </div>
                     </div>
 

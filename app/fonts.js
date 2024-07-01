@@ -23,7 +23,7 @@ export const oswald = Oswald({
 export const space_grotesk = Space_Grotesk({
     subsets: ['latin'],
     display: 'swap',
-    weight: "400"
+    weight:  ["400", "700"]
 })
 
 export const jura = Jura({
